@@ -20,12 +20,12 @@ yesterday_stock_price=float(stock_list_data[0])
 day_before_yesterday = float(stock_list_data[1])
 difference = (yesterday_stock_price - day_before_yesterday)
 up_down =None
-if difference >0:
+if difference >5:
     up_down = "⬆"
 else:
     up_down = "⬇"
 percentage_difference = round((difference/yesterday_stock_price) *100)
-if abs(percentage_difference) >0:
+if abs(percentage_difference) >5:
     print("Get News")
 parameters_news ={
     "q": COMPANY_NAME,
